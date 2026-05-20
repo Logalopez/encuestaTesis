@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+p{
+  text-align: center;
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* HOME */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff; /* gris claro */
+  padding: 40px;
+}
+.presentacion{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+  gap: 3rem;
+}
+.presentacion, h1{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.presentacion, p{
+  font-size: 15px;
+  text-align: center;
+}
+.containerRole {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .containerRole {
+    flex-direction: column; /* botones en columna */
+    gap: 20px; /* espacio entre botones */
+  }
+
+  .opcion {
+    width: 90%; /* que ocupen casi todo el ancho */
+    max-width: 400px;
+    height: 150px; /* más compacto en móvil */
+  }
+}
+.opcion {
+  width: 350px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none; /* quita la raya del Link */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.opcion:hover {
+  transform: translateY(-4px); /* se levanta un poco */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  background-color: #fafafa; /* ligero cambio de fondo */
+}
+
+.opcion p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.containerRole a {
+  text-decoration: none; /* elimina la raya */
+}
+
+/* CUESTIONARIO */
+
+.containerCuestionario {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #ffffff; /* gris muy claro en lugar de blanco puro */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px;
+}
+
+/* Estilo general (desktop/tablet) */
+.containerPreguntas {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid #000000; /* borde negro */
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* Estilo para móviles */
+@media (max-width: 768px) {
+  .containerPreguntas {
+    border: none; /* quita las rayas negras */
+    box-shadow: none; /* elimina sombra si la tienes */
+    background-color: #ffffff; /* mantiene blanco */
+    padding: 20px; /* un poco más compacto */
+  }
+
+  .pregunta input,
+  .pregunta textarea {
+    border: 1px solid #000000; /* mantiene borde negro en campos */
+  }
+
+  .likert-scale {
+    border: none; /* quita borde en escala Likert */
+    background-color: #ffffff;
+  }
+}
+
+
+.containerRegresar {
+  margin-bottom: 20px;
+}
+
+.return a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #000000;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.return a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cuestionario .descripcion h1 {
+  font-size: 1.8rem;
+  color: #111111; /* negro suave */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.preguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pregunta label {
+  display: block;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.pregunta input,
+.pregunta textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pregunta input:focus,
+.pregunta textarea:focus {
+  border-color: #000000;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.pregunta textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #444444;
+  transform: scale(1.05);
+}
+
+.likert-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.opt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opt-container label {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.opt-container input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #000000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.opt-container input[type="radio"]:hover {
+  transform: scale(1.2); /* efecto llamativo al pasar el mouse */
+}
+
+
+
+/*GRACIAS SECTION*/
+
+.gracias-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh; /* ocupa toda la pantalla */
+  background-color: #ffffff; /* fondo blanco */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gracias-container h1 {
+  color: #000000; /* negro */
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.gracias-container p {
+  color: #333333; /* gris oscuro para contraste */
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.acciones {
+  margin-top: 20px;
+}
+
+.btn-inicio {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000000; /* botón negro */
+  color: #ffffff; /* texto blanco */
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-inicio:hover {
+  background-color: #444444; /* gris oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .gracias-container {
+    background-color: #ffffff; /* más limpio en móvil */
+    padding: 15px;
+  }
+
+  .gracias-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .gracias-container p {
+    font-size: 1rem;
+  }
+
+  .btn-inicio {
+    width: 100%; /* botón ocupa todo el ancho en celular */
+    text-align: center;
+  }
+}
+.error-msg {
+  color: #b00020; /* rojo sobrio */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.success-msg {
+  color: #008000; /* verde sobrio */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
