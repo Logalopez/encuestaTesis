@@ -322,3 +322,6 @@ button[type="submit"]:hover {
   margin-top: 10px;
   text-align: center;
 }
+span{
+  color: #b00020;
+}
