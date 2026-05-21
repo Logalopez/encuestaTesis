@@ -93,7 +93,8 @@ function CuestionarioExpertos() {
             </div>
             <div className="pregunta">
               <label htmlFor="anos_Experiencia">
-                Años de experiencia profesional:
+                Años de experiencia profesional:{" "}
+                <span>RESPUESTA EN NUMEROS *IMPORTANTE*</span>
               </label>
               <input
                 name="anos_Experiencia"
