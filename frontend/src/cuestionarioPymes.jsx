@@ -27,6 +27,8 @@ function CuestionarioPymes() {
     p17: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setFormData({
       ...formData,

@@ -22,6 +22,8 @@ function CuestionarioExpertos() {
     p10: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
