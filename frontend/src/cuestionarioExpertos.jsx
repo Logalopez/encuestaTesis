@@ -45,12 +45,9 @@ function CuestionarioExpertos() {
       const data = await response.json();
 
       if (response.ok) {
-        setError("");
-        setSuccess(data.mensaje); // "Respuesta guardada correctamente"
-        window.location.href = "/gracias"; // redirige si quieres
+        navigate("/gracias"); // navegación interna, sin 404
       } else {
-        setSuccess("");
-        setError(data.mensaje || "Error al enviar el cuestionario");
+        alert("Error al enviar el cuestionario");
       }
     } catch (error) {
       console.error(error);

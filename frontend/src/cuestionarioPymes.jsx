@@ -48,7 +48,7 @@ function CuestionarioPymes() {
       });
 
       if (response.ok) {
-        window.location.href = "/gracias";
+        navigate("/gracias"); // navegación interna, sin 404
       } else {
         alert("Error al enviar el cuestionario");
       }
