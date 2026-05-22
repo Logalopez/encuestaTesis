@@ -44,7 +44,9 @@ p{
 @media (max-width: 768px) {
   .containerRole {
     flex-direction: column; /* botones en columna */
-    gap: 20px; /* espacio entre botones */
+    gap: 2rem; /* espacio entre botones */
+    margin-bottom: 100px;
+    margin-top: 60px;
   }
 
   .opcion {
